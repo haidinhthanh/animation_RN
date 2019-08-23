@@ -14,6 +14,10 @@ export default class Demo extends React.Component{
                     title='ValueTrackScreen'
                     onPress={()=>navigation.navigate('ValueTrackScreen')}
                 />
+                <Button
+                    title='Horizontal list'
+                    onPress={()=>navigation.navigate('HorizonList')}
+                />
             </View>
         );
     }

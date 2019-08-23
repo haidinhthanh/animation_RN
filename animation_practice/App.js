@@ -11,6 +11,7 @@ import Gesture from './src/container/Gesture';
 import DemoNavigator from './src/container/Gesture/DemoNavigator';
 import PanResDemo from './src/container/Gesture/PanResDemo';
 import LayoutAnim from './src/container/LayoutAnim';
+import HorizontalList from './src/container/Demo/HorizontalList';
 
 const DemoStack = createStackNavigator({
   DemoScreen:{
@@ -21,6 +22,9 @@ const DemoStack = createStackNavigator({
   },
   ValueTrackScreen:{
     screen: TrackValue,
+  },
+  HorizonList:{
+    screen: HorizontalList
   }
 })
 const GestureStack= createStackNavigator({
