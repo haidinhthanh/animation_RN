@@ -25,7 +25,7 @@ export default class TrackValue extends Component {
           {items.map(i => {
             const translateX = Animated.multiply(Animated.subtract(index, i), 40);
             const transform = {
-              transform: [{ translateX }],
+              transform: [{ translateX : translateX }],
             };
             return (
               <TouchableOpacity

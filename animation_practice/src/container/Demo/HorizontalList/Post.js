@@ -8,11 +8,9 @@ import {
     Text,
     View
 } from 'react-native';
-import images from '../../../asset/images';
 
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
-const DEVICE_HEIGHT= Dimensions.get('window').height;
 const CARD_GUTTER_VERTICAL = 16;
 const CARD_GUTTER_HORIZONTAL = 8;
 const CARD_WIDTH = DEVICE_WIDTH - 32;
@@ -31,15 +29,6 @@ export default class Post extends React.Component {
             zIndex: this.scrollValue.interpolate({
                 inputRange: [0, 1],
                 outputRange: [1, 2],
-                extrapolate: 'clamp'
-            })
-        };
-    }
-    elevateItem = () => {
-        return {
-            zIndex: this.scrollValue.interpolate({
-                inputRange: [0, 1],
-                outputRange: [1, 3],
                 extrapolate: 'clamp'
             })
         };
@@ -76,17 +65,7 @@ export default class Post extends React.Component {
             }],
         };
     }
-    scaleComment=()=>{
-        const CARD_HEIGHT= this.props.height;
-        return {
-            transform:[ {
-                scale :this.scrollValue.interpolate({
-                    inputRange:[0, SCROLL_INTERVAL],
-                    outputRange:[1, DEVICE_HEIGHT/CARD_HEIGHT]
-                })
-            }]
-        }
-    }
+
     render() {
         return (
             <Animated.View style={[styles.container, {height: this.props.height}, this.elevate()]}>
@@ -96,13 +75,14 @@ export default class Post extends React.Component {
 
                 <Animated.ScrollView
                   horizontal
-                  style={[styles.scrollContainer]}
+                  style={styles.scrollContainer}
                   contentContainerStyle={styles.contentContainer}
                   showsHorizontalScrollIndicator={false}
                   snapToInterval={SCROLL_INTERVAL}
                   decelerationRate="fast"
                   scrollEventThrottle={1}
-                  onScroll={this.onScroll}>
+                  onScroll={this.onScroll}
+                >
 
                     {/* This is our main title card */}
                     <View style={styles.card}>
@@ -116,10 +96,9 @@ export default class Post extends React.Component {
                     </View>
 
                     {/* And this is our one and only comment */}
-                    <Animated.View style={[styles.card,this.verticallyAlignComment(), this.elevateItem()]}>
+                    <Animated.View style={[styles.card, this.verticallyAlignComment()]}>
                         <Text style={styles.text}>{this.props.comment}</Text>
                     </Animated.View>
-
                 </Animated.ScrollView>
             </Animated.View>
         );
@@ -129,11 +108,10 @@ export default class Post extends React.Component {
 const styles = StyleSheet.create({
     container: {
         marginVertical: CARD_GUTTER_VERTICAL/2,
-        
     },
 
     scrollContainer: {
-        overflow: 'visible',
+        overflow: 'visible'
     },
 
     contentContainer: {
@@ -142,7 +120,7 @@ const styles = StyleSheet.create({
 
     overlay: {
         opacity: 0,
-        backgroundColor: 'white',
+        backgroundColor: '#fff',
         position: 'absolute',
         width: DEVICE_WIDTH,
         height: 99999,

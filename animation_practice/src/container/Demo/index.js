@@ -18,6 +18,10 @@ export default class Demo extends React.Component{
                     title='Horizontal list'
                     onPress={()=>navigation.navigate('HorizonList')}
                 />
+                <Button
+                    title='BubbleAnim'
+                    onPress={()=>navigation.navigate('BubbleAnim')}
+                />
             </View>
         );
     }

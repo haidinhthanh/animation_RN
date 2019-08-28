@@ -28,10 +28,7 @@ export default class HorizontalList extends React.Component {
 
     render() {
         return (
-            <ScrollView 
-                contentInsetAdjustmentBehavior="scrollableAxes"
-                style={{overflow: 'visible'}}
-            >
+            <ScrollView contentInsetAdjustmentBehavior="scrollableAxes" >
                 {this.state.posts.map((post, i) => {
                     return <Post {...post} height={DEVICE_HEIGHT/3.75} index={i} key={i} />
                 })}

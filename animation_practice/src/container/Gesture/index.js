@@ -14,6 +14,10 @@ export default class Gesture extends React.Component{
           title='PanRes Demo'
           onPress={()=>navigation.navigate("PanResDemo")}
         />
+        <Button
+          title='ScreenHorAnim'
+          onPress={()=>navigation.navigate("ScreenHorAnim")}
+        />
       </View>
     );
   }

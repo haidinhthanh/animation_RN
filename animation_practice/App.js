@@ -12,6 +12,8 @@ import DemoNavigator from './src/container/Gesture/DemoNavigator';
 import PanResDemo from './src/container/Gesture/PanResDemo';
 import LayoutAnim from './src/container/LayoutAnim';
 import HorizontalList from './src/container/Demo/HorizontalList';
+import ScreenHorizontal from './src/container/Gesture/ScreenHorizontal.js';
+import BubbleAnim from './src/container/Demo/BubbleAnim';
 
 const DemoStack = createStackNavigator({
   DemoScreen:{
@@ -25,6 +27,9 @@ const DemoStack = createStackNavigator({
   },
   HorizonList:{
     screen: HorizontalList
+  },
+  BubbleAnim:{
+    screen: BubbleAnim,
   }
 })
 const GestureStack= createStackNavigator({
@@ -32,10 +37,13 @@ const GestureStack= createStackNavigator({
     screen: Gesture,
   },
   DemoNavigator: {
-    screen: DemoNavigator
+    screen: DemoNavigator,
   },
   PanResDemo:{
     screen: PanResDemo,
+  },
+  ScreenHorAnim:{
+    screen: ScreenHorizontal,
   }
 })
 
