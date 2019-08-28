@@ -60,9 +60,9 @@ export default class LoadArray extends React.Component{
         const arrAnim=arr.map((value,index)=>{
             return Animated.timing(this.animationValues[value],{
                 toValue:1,
-                duration:6000,
+                duration:5000,
             });
         })
-        Animated.stagger(40,arrAnim).start();
+        Animated.stagger(50,arrAnim).start();
     }
 }

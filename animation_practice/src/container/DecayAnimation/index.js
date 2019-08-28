@@ -1,5 +1,5 @@
 import React from 'react'
-import {View,Animated,Button} from 'react-native'
+import {View,Animated,Button,Image} from 'react-native'
 import images from '../../asset/images';
 
 export default class DecayAnimation extends React.Component{
@@ -20,6 +20,7 @@ export default class DecayAnimation extends React.Component{
                             translateY: dropAnim,
                         }]
                     }}
+                    resizeMode='contain'
                 />
                 <View style={{marginTop:300}}>
                     <Button 
@@ -33,6 +34,7 @@ export default class DecayAnimation extends React.Component{
     onDrop=()=>{
         Animated.decay(this.dropAnim,{
             velocity: 0.8,
+            deceleration:0.995
         }).start(()=>this.dropAnim.setValue(0))
     }
 }

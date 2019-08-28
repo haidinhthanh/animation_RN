@@ -18,7 +18,7 @@ export default class SpringAnimation extends React.Component{
                     style={{ width: 227, height: 200, transform: [{scale: scaleAnim}] ,alignSelf:'center'}}                            
                     source={images.reactjs}
                 />
-                <View style={{marginTop:200,}}>
+                <View style={{marginTop:100,}}>
                     <Button
                         title="scale"
                         onPress={this.onScale}
@@ -58,7 +58,7 @@ export default class SpringAnimation extends React.Component{
         Animated.spring(this.scaleAnim,{
             toValue:1,
             friction:1,
-            tension:1000,
+            tension:100,
         }).start(()=> this.scaleAnim.setValue(0.5))
     }
     onScaleAndSpeed=()=>{
@@ -70,8 +70,8 @@ export default class SpringAnimation extends React.Component{
     onScaleAndSpeedBouciness=()=>{
         Animated.spring(this.scaleAnim,{
             toValue:1,
-            speed:5,
-            bounciness:40,
+            speed:100,
+            bounciness:20,
         }).start(()=> this.scaleAnim.setValue(0.5))
     }
 }
