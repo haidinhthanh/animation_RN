@@ -20,15 +20,14 @@ Có 3 loại configure anim phổ biến:
 
 1. Định nghĩa: Map time range to easing value.
 2. Cú pháp: 
-  Animated.timing(
-    animatedValue,
-    {
-      toValue: number,              //giá trị đầu ra
-      duration: number,             //thời gian của anim 
-      easing: easingFunction,       //hàm easing biểu diễn quá trình của anim
-      delay: number                 //độ trễ của anim
-    }
-  )
+    Animated.timing(
+      animatedValue,{
+        toValue: number,//giá trị đầu ra 
+        duration: number,//thời gian của anim    
+        easing:easingFunction,//hàm easing biểu diễn quá trình của anim
+        delay: number//độ trễ của anim
+        }
+   )
 @easingFuction: convey physically believable motion. 
 
 1 số hàm predfine: 
