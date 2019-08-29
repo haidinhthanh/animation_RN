@@ -53,7 +53,6 @@ tham khảo thêm: https://facebook.github.io/react-native/docs/easing
       bouciness: number     // điều khiển độ đàn hồi của anim
     }
   )
-
 ***[1.3.3]Animated.decay(): 
 
 1.Định nghĩa: Animates a value from an initial velocity to zero based on a decay coefficient. // từ 1 giá trị vận tốc khởi tạo giảm tới 0 dựa theo hệ số gia giảm.
