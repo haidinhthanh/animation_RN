@@ -14,6 +14,8 @@ import LayoutAnim from './src/container/LayoutAnim';
 import HorizontalList from './src/container/Demo/HorizontalList';
 import ScreenHorizontal from './src/container/Gesture/ScreenHorizontal.js';
 import BubbleAnim from './src/container/Demo/BubbleAnim';
+import BasicAnimation from './src/container/BasicAnimation';
+import CarouselAnim from './src/container/Demo/CarouselAnim';
 
 const DemoStack = createStackNavigator({
   DemoScreen:{
@@ -30,6 +32,9 @@ const DemoStack = createStackNavigator({
   },
   BubbleAnim:{
     screen: BubbleAnim,
+  },
+  CarouselAnim:{
+    screen: CarouselAnim,
   }
 })
 const GestureStack= createStackNavigator({
@@ -46,8 +51,10 @@ const GestureStack= createStackNavigator({
     screen: ScreenHorizontal,
   }
 })
-
-const AppBotomNavigator= createBottomTabNavigator({
+const BasicAnimStack= createStackNavigator({
+  BasicAnim:{
+    screen: BasicAnimation
+  },
   TimingAnim: {
     screen: TimingAnimation,
   },
@@ -59,6 +66,11 @@ const AppBotomNavigator= createBottomTabNavigator({
   },
   ComposeAnim:{
     screen: ComposeAnimation,
+  },
+})
+const AppBotomNavigator= createBottomTabNavigator({
+  BasicAnim:{
+    screen: BasicAnimStack,
   },
   Demo:{
     screen: DemoStack,

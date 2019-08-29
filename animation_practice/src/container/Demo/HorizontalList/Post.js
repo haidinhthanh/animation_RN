@@ -8,7 +8,7 @@ import {
     Text,
     View
 } from 'react-native';
-
+import images from '../../../asset/images'
 
 const DEVICE_WIDTH = Dimensions.get('window').width;
 const CARD_GUTTER_VERTICAL = 16;
@@ -90,7 +90,8 @@ export default class Post extends React.Component {
                           style={styles.image}
                           width={CARD_WIDTH}
                           height={this.props.height-52}
-                          source={{uri: 'https://picsum.photos/'+ CARD_WIDTH*2 +'/'+ this.props.height*1.5 +'/?gravity=center&image='+ Math.round(Math.random()*999)}}
+                          source={images.reactjs}
+                          resizeMode='contain'
                         />
                         <Text style={styles.text}>{this.props.title}</Text>
                     </View>

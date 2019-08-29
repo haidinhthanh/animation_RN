@@ -5,7 +5,7 @@ export default class Demo extends React.Component{
     render(){
         let {navigation} = this.props;
         return(
-            <View style={{flex:1, alignItems:'center' }}>
+            <View>
                 <Button
                     title='Load Array Demo'
                     onPress={()=>navigation.navigate('LoadArrayScreen')}
@@ -21,6 +21,10 @@ export default class Demo extends React.Component{
                 <Button
                     title='BubbleAnim'
                     onPress={()=>navigation.navigate('BubbleAnim')}
+                />
+                <Button
+                    title='CarouselAnim'
+                    onPress={()=>navigation.navigate('CarouselAnim')}
                 />
             </View>
         );
