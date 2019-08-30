@@ -118,7 +118,7 @@ Demo:
     }],
   }}
   
-  [1.7] Track gesture:
+[1.7] Track gesture:
   Theo dõi các hoạt động như cuốn, kéo thả tạo animation:
   2 cách phổ biến:
   
@@ -138,17 +138,17 @@ Demo:
   ***[1.7.2] đối với kéo,thả,vuốt : sử dụng PanResponder để bắt và theo dõi vị trí kèo thả, tốc độ,....
   tham khảo : https://facebook.github.io/react-native/docs/panresponder
   
-  [1.8]Responding to the current animation value
+[1.8] Responding to the current animation value
   Dùng để theo dõi các giá trị AnimtedValue đi đang thực hiện Animtion. Có 2 cách:
     -spring.stopAnimation(callback) dừng animtion và gọi callback để lấy giá trị cuối cùng khi kết thúc animtion. 
     -spring.addListener(callback) gọi 1 callback không đồng bộ khi animation đang chạy, lấy giá trị hiện tại của animation.
   
-  [1.9] create Animated Component : \
+[1.9] create Animated Component:
   Sử dụng  Animated.createAnimatedComponent() để tạo ra animated component có thể tương tác với Animated Api như các Animated component có sẵn.
   Ex : AnimateFlatlist= Animated.createAnimatedComponent(Flatlist)
  For more specific info : read https://facebook.github.io/react-native/docs/animations :)) 
  
- [2] Layout Animation
+[2] Layout Animation
  Tự động tạo Animation cho view layout khi có sự thay đổi toàn cục layout.
  Một cách thông dụng thường : 
     B1:import {LayoutAnimation} from 'react-native
