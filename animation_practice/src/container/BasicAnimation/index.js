@@ -22,6 +22,10 @@ export default class BasicAnimation extends React.Component{
           title='Compose Anim'
           onPress={()=>navigation.navigate("ComposeAnim")}
         />
+        <Button
+          title='Animated Comp'
+          onPress={()=>navigation.navigate("AnimatedComp")}
+        />
       </View>
     );
   }

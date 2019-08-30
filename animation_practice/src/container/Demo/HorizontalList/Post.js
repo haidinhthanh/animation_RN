@@ -62,7 +62,10 @@ export default class Post extends React.Component {
                     outputRange: [0, ACTIVE_POSITION],
                     extrapolate: 'clamp'
                 }),
-            }],
+                
+            },
+                {perspective: 1000}
+            ],
         };
     }
 
