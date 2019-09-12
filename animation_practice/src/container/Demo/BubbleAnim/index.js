@@ -36,6 +36,8 @@ export default class BubbleAnim extends React.Component{
             currentbg: screens[0].bgcolor,
             currentSc: screens[0],
         };
+        this.onSwipeLeft=this.onSwipeLeft.bind(this);
+        this.onSwipeRight=this.onSwipeRight.bind(this);
     }
     componentDidMount(){
         const {currentbg,currentSc, _counter} = this.state;
@@ -78,8 +80,8 @@ export default class BubbleAnim extends React.Component{
         return(
             <Swipe
                 style={[{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: this.state.currentbg}]}
-                onSwipeLeft={this.onSwipeLeft.bind(this)}
-                onSwipeRight={this.onSwipeRight.bind(this)}
+                onSwipeLeft={this.onSwipeLeft}
+                onSwipeRight={this.onSwipeRight}
             >
                 <CircleTransition
                     screen={this.state.currentSc}

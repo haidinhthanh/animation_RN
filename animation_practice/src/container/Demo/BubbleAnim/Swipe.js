@@ -15,8 +15,6 @@ class Swipe extends React.Component{
             velocityThreshold: 0.3,
             swipeOffsetThreshold: 80,
         }
-    }
-    componentWillMount(){
         this._panResponder= PanResponder.create(
             {
                 onStartShouldSetPanResponder:()=> true,

@@ -26,6 +26,10 @@ export default class Demo extends React.Component{
                     title='CarouselAnim'
                     onPress={()=>navigation.navigate('CarouselAnim')}
                 />
+                <Button
+                    title='PageIndicator'
+                    onPress={()=>navigation.navigate('PageIndicator')}
+                />
             </View>
         );
     }

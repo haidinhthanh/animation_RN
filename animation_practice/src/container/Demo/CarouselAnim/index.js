@@ -147,7 +147,7 @@ export default class CarouselAnim extends React.Component{
                 outputRange:[0,-500],
             })
         });
-        let arrayTranslateY= this.arrayMove.map((value,index)=>{
+        let arrayRotateZ= this.arrayMove.map((value,index)=>{
             let animatedValue= this.arrayMove[index];
             return animatedValue.interpolate({
                 inputRange:[0,1],
@@ -173,7 +173,7 @@ export default class CarouselAnim extends React.Component{
                                     },{
                                         translateX: arrayTranslate[index],
                                     },{
-                                        rotateZ: arrayTranslateY[index]
+                                        rotateZ: arrayRotateZ[index]
                                     }
                                     ]
                                 }

@@ -17,6 +17,7 @@ import BubbleAnim from './src/container/Demo/BubbleAnim';
 import BasicAnimation from './src/container/BasicAnimation';
 import CarouselAnim from './src/container/Demo/CarouselAnim';
 import AnimatedComponentHeader from './src/container/AnimatedComponentHeader';
+import PageIndicator from './src/container/Demo/PageIndicator';
 
 const DemoStack = createStackNavigator({
   DemoScreen:{
@@ -36,6 +37,9 @@ const DemoStack = createStackNavigator({
   },
   CarouselAnim:{
     screen: CarouselAnim,
+  }, 
+  PageIndicator:{
+    screen: PageIndicator,
   }
 })
 const GestureStack= createStackNavigator({
